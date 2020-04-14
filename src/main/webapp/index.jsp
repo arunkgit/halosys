@@ -1,5 +1,5 @@
 <html>
 	<body>
-		<h1 style="color:purple;">vishnuprabha favorite color!</h1>
+		<h1 style="color:yellow;">Deployed tomcat war!</h1>
 	</body>
 </html>
