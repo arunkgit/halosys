@@ -1,5 +1,5 @@
 <html>
-<body>
-<h2>Finally learn tomcat installation and war file deployment using manual method!</h2>
-</body>
+	<body>
+		<h1 style="color:green;">Welcome to Jenkins!</h1>
+	</body>
 </html>
