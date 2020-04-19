@@ -7,11 +7,7 @@ pipeline{
 	 
     	choice choices: ['Dev', 'Staging', 'Prod'], name: 'Environment_Name'
 }
-    
-    environment {
-        BUILD = 'Maven Build success'
-        DEPLOY = 'Deploying artifacts success'
-    }
+   
     
     stages{
     	stage('Git Checkout'){
@@ -33,11 +29,5 @@ pipeline{
         }
     }
     
-    post {
-	  failure {
-	    mail body: "Please go to ${BUILD_URL} and verify the build",
-		 subject: "Job ${JOB_NAME}##${BUILD_NUMBER} is failed", 
-	    	 to: 'myowngithub@gmail.com'
-	  }
-	}
+    
 }
