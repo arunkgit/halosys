@@ -1,3 +1,5 @@
+currentBuild="${currentBuild.projectName}#${currentBuild.id}"
+
 pipeline{
     agent any
     
