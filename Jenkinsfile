@@ -11,7 +11,7 @@ pipeline{
     stages{
        stage('MavenBuild'){
             steps{
-                sh label: '', script: '/opt/maven/bin/mvn clean package xy'
+                sh label: '', script: '/opt/maven/bin/mvn clean package'
                 echo "${env.BUILD}"
             }
         }
