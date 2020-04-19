@@ -16,12 +16,12 @@ pipeline{
     stages{
        stage('MavenBuild'){
             steps{
-                echo "${env.BUILD}"
+                echo "We are building ${params.Branch_Name} branch"
             }
         }
         stage('Tomcat Deploy'){
             steps{
-                echo "${env.DEPLOY}"
+                echo "We are deploying ${params.Environment_Name} environment"
             }
         }
     }
