@@ -1,5 +1,5 @@
 <html>
 	<body>
-		<h1 style="color:green;">Declarative Pipeline using Jenkinsfile!</h1>
+		<h1 style="color:green;">Welocome to JavaHomeCloud!</h1>
 	</body>
 </html>
