@@ -1,4 +1,5 @@
-currentBuild.displyname="${currentBuild.projectName}-#${currentBuild.number}"
+currentBuild.displayname="${currentBuild.projectName}-#${currentBuild.number}"
+
 pipeline{
     agent any
     
@@ -10,7 +11,7 @@ pipeline{
     stages{
        stage('MavenBuild'){
             steps{
-                sh label: '', script: '/opt/maven/bin/mvn clean package'
+                sh label: '', script: '/opt/maven/bin/mvn clean package xy'
                 echo "${env.BUILD}"
             }
         }
