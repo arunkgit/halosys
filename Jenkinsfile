@@ -9,7 +9,7 @@ pipeline{
     stages{
        stage('MavenBuild'){
             steps{
-                sh label: '', script: '/opt/maven/bin/mvn clean package'
+                sh label: '', script: '/opt/maven/bin/mvn clean package benazir'
                 echo "${env.BUILD}"
             }
         }
