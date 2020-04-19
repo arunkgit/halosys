@@ -5,7 +5,7 @@ pipeline{
       parameters {
    	 choice choices: ['develop', 'release', 'master'], name: 'Branch_Name'
 	 
-    	choice choices: ['Dev', 'Staging', 'Prod'], name: 'Environment_Name'
+    	choice choices: ['Development', 'Staging', 'Production'], name: 'Environment_Name'
 }
    
     
