@@ -3,7 +3,7 @@ currentBuild.displayName="${currentBuild.projectName}-#${currentBuild.number}"
 pipeline{
     agent any
       parameters {
-   	 choice choices: ['Develop', 'Release', 'Master'], name: 'Branch_Name'
+   	 choice choices: ['develop', 'release', 'master'], name: 'Branch_Name'
 	 
     	choice choices: ['Dev', 'Staging', 'Prod'], name: 'Environment_Name'
 }
