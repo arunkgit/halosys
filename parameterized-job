@@ -1,11 +1,13 @@
 currentBuild.displayName="${currentBuild.projectName}-#${currentBuild.number}"
 
+serverMap=[dev: "172.13.4.5",stg: "172.13.4.6",prod: "172.13.4.7"]
+
 pipeline{
     agent any
       parameters {
    	 choice choices: ['develop', 'release', 'master'], name: 'Branch_Name'
 	 
-    	choice choices: ['Development', 'Staging', 'Production'], name: 'Environment_Name'
+    	choice choices: ['dev', 'stg', 'prod'], name: 'Environment_Name'
 }
    
     
@@ -22,12 +24,25 @@ pipeline{
                 echo "We are building ${params.Branch_Name} branch"
             }
         }
-        stage('Tomcat Deploy'){
+        stage('Tomcat Deploy dev'){
             steps{
-                echo "We are deploying ${params.Environment_Name} environment"
+                echo "We are deploying to dev environment with ip ${serverMap.dev}"
             }
         }
+	
+	 stage('Tomcat Deploy stg'){
+            steps{
+	    
+                echo "We are deploying to stg environment with ip ${serverMap.stg}"
+            }
+        }
+	
+	 stage('Tomcat Deploy prod'){
+            steps{
+                 echo "We are deploying to prod environment with ip ${serverMap.prod}"
+            }
+        }
+	
     }
-    
-    
+  
 }
