@@ -1,8 +1,10 @@
 pipeline{
     agent any
+    environment {
+        TOM = 'I am started using environment variable'
+    }
     stages{
-        
-        stage('MavenBuild'){
+       stage('MavenBuild'){
             steps{
                 sh label: '', script: '/opt/maven/bin/mvn clean package'
             }
