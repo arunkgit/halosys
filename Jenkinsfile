@@ -25,7 +25,7 @@ pipeline{
     post {
 	  failure {
 	    mail body: 'Your current job failed',
-		    subject: "${env.BRANCH_NAME#env.BUILD_NUMBER}JOB FAILED", 
+		    subject: "${env.BRANCH_NAME}#${env.BUILD_NUMBER}JOB FAILED", 
 	    	 to: 'myowngithub@gmail.com'
 	  }
 	}
