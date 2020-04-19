@@ -4,6 +4,7 @@ pipeline{
     agent any
       parameters {
    	 choice choices: ['Develop', 'Release', 'Master'], name: 'Branch_Name'
+	 
     	choice choices: ['Dev', 'Staging', 'Prod'], name: 'Environment_Name'
 }
     
