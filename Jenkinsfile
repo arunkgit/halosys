@@ -22,4 +22,12 @@ pipeline{
         }
     }
     
+    post {
+	  failure {
+	    mail body: 'Your current job failed',
+	    	 subject: 'JOB FAILED', 
+	    	 to: 'myowngithub@gmail.com'
+	  }
+	}
+    
 }
