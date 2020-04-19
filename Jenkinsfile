@@ -24,8 +24,8 @@ pipeline{
     
     post {
 	  failure {
-	    mail body: 'Your current job failed',
-		    subject: "${JOB_NAME}#${BUILD_NUMBER}JOB FAILED", 
+	    mail body: "Please go to ${BUILD_URL} and verify the build",
+		 subject: "Job ${JOB_NAME}##${BUILD_NUMBER} is failed", 
 	    	 to: 'myowngithub@gmail.com'
 	  }
 	}
