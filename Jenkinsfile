@@ -1,5 +1,4 @@
 currentBuild.displyname="${currentBuild.projectName}-#${currentBuild.number}"
-
 pipeline{
     agent any
     
@@ -31,5 +30,4 @@ pipeline{
 	    	 to: 'myowngithub@gmail.com'
 	  }
 	}
-    
 }
