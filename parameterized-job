@@ -25,12 +25,20 @@ pipeline{
             }
         }
         stage('Tomcat Deploy dev'){
+	when {
+                
+                expression { params.Environment_Name == 'dev' }
+            }
             steps{
                 echo "We are deploying to dev environment with ip ${serverMap.dev}"
             }
         }
 	
 	 stage('Tomcat Deploy stg'){
+	 when {
+                
+                expression { params.Environment_Name == 'stg' }
+            }
             steps{
 	    
                 echo "We are deploying to stg environment with ip ${serverMap.stg}"
@@ -38,6 +46,10 @@ pipeline{
         }
 	
 	 stage('Tomcat Deploy prod'){
+	 when {
+                
+                expression { params.Environment_Name == 'prod' }
+            }
             steps{
                  echo "We are deploying to prod environment with ip ${serverMap.prod}"
             }
