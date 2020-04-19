@@ -14,6 +14,13 @@ pipeline{
     }
     
     stages{
+    	stage('Git Checkout'){
+            steps{
+                sh "git checkout ${params.Branch_Name}"
+                echo "We are now in ${params.Branch_Name} branch"
+            }
+        }
+    
        stage('MavenBuild'){
             steps{
                 echo "We are building ${params.Branch_Name} branch"
