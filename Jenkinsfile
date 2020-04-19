@@ -9,7 +9,7 @@ pipeline{
     stages{
        stage('MavenBuild'){
             steps{
-                sh label: '', script: '/opt/maven/bin/mvn clean package'
+                sh label: '', script: '/opt/maven/bin/mvn clean package xy'
                 echo "${env.BUILD}"
             }
         }
@@ -25,7 +25,7 @@ pipeline{
     post {
 	  failure {
 	    mail body: 'Your current job failed',
-	    	 subject: 'JOB FAILED', 
+		    subject: "${env.BRANCH_NAME#env.BUILD_NUMBER}JOB FAILED", 
 	    	 to: 'myowngithub@gmail.com'
 	  }
 	}
