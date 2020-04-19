@@ -2,11 +2,7 @@ currentBuild.displayName="${currentBuild.projectName}-#${currentBuild.number}"
 
 pipeline{
     agent any
-      parameters {
-   	 choice choices: ['Develop', 'Release', 'Master'], name: 'Branch_Name'
-    	choice choices: ['Dev', 'Staging', 'Prod'], name: 'Environment_Name'
-}
-    
+     
     environment {
         BUILD = 'Maven Build success'
         DEPLOY = 'Deploying artifacts success'
