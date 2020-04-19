@@ -1,11 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage('Git Checkout'){
-            steps{
-                git 'https://github.com/arunkgit/halosys.git'
-            }
-        }
+        
         stage('MavenBuild'){
             steps{
                 sh label: '', script: '/opt/maven/bin/mvn clean package'
