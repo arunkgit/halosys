@@ -1,5 +1,5 @@
 <html>
 	<body>
-		<h1 style="color:violet;">Welcome to JavaHomeCloud!</h1>
+		<h1 style="color:greent;">CORONO VIRUS!</h1>
 	</body>
 </html>
