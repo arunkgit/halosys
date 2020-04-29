@@ -29,4 +29,12 @@
 		    <url>http://10.220.110.10:8081/repository/halosys-release/</url>
 		</repository>
   	</distributionManagement>
+	
+  <repositories>
+    <repository>
+      <id>nexus</id>
+      <url>http://10.220.110.10:8081/repository/halosys-group/</url>
+    </repository>
+  </repositories>
+	
 </project>
