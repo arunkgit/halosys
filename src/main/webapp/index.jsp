@@ -1,5 +1,5 @@
 <html>
 	<body>
-		<h1 style="color:pink;">This deployment from docker using rekha!</h1>
+		<h1 style="color:orange;">This deployment from docker using jenkins!</h1>
 	</body>
 </html>
