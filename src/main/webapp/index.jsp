@@ -1,5 +1,5 @@
 <html>
 	<body>
-		<h1 style="color:red;">Datastructure Guru Ramesh Sir!</h1>
+		<h1 style="color:green;">Sucessfully deployed tomcat on docker using Jenkins Pipeline!</h1>
 	</body>
 </html>
