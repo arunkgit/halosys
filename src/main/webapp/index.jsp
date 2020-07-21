@@ -1,5 +1,5 @@
 <html>
 	<body>
-		<h1 style="color:green;">Sucessfully deployed tomcat on docker using Jenkins Pipeline!</h1>
+		<h1 style="color:green;">Tom and Jerry!</h1>
 	</body>
 </html>
