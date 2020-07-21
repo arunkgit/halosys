@@ -1,5 +1,5 @@
 <html>
 	<body>
-		<h1 style="color:green;">Tom and Jerry!</h1>
+		<h1 style="color:green;">CORONO IS VIRUS!</h1>
 	</body>
 </html>
