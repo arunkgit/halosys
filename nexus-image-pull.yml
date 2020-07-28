@@ -5,5 +5,4 @@
     - name: pull an image
       docker_image:
         name: 10.220.110.10:8083/halosys:docker_tag
-        source: pull
 ...
