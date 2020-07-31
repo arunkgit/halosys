@@ -6,6 +6,11 @@
       docker_image:
         name: 10.220.110.10:8083/halosys:docker_tag
         
+    - name: Remove the exsisting container
+      docker_container:
+        name: ansibledeployment
+        state: absent
+        
     - name: Create a container  
       docker_container:
         name: ansibledeployment
